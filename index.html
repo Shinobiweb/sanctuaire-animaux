@@ -4,27 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centre de soins - Accueil</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f7f7f7; color:#333; }
-    .hamburger { position:fixed; top:20px; right:20px; width:50px; height:50px; background:#333; border-radius:50%; cursor:pointer; z-index:1000; display:flex; align-items:center; justify-content:center; transition:background .3s; }
-    .hamburger:hover { background:#555; }
-    .hamburger span { width:25px; height:3px; background:#fff; position:relative; transition:all .3s; }
-    .hamburger span::before, .hamburger span::after { content:''; position:absolute; width:25px; height:3px; background:#fff; transition:all .3s; }
-    .hamburger span::before { top:-8px; } .hamburger span::after { bottom:-8px; }
-    .hamburger.active span { background:transparent; }
-    .hamburger.active span::before { transform:rotate(45deg); top:0; }
-    .hamburger.active span::after { transform:rotate(-45deg); bottom:0; }
-    .nav-menu { position:fixed; top:0; right:-300px; width:300px; height:100vh; background:#333; transition:right .3s; z-index:999; padding-top:80px; }
-    .nav-menu.active { right:0; }
-    .nav-menu a { display:block; color:#fff; text-decoration:none; padding:15px 30px; font-size:18px; transition:background .3s; }
-    .nav-menu a:hover { background:#555; }
-    .main-content { padding:100px 20px 20px; text-align:center; }
-    h1 { font-size:2.5em; margin-bottom:30px; color:#333; }
-    .welcome-text { font-size:1.2em; line-height:1.6; max-width:800px; margin:0 auto 40px; }
-    .featured-images { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
-    .featured-images img { width:100%; height:200px; object-fit:cover; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,.1); transition:transform .2s; }
-    .featured-images img:hover { transform:scale(1.05); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu"><span></span></button>
@@ -34,18 +14,68 @@
     <a href="gallery.html">Galerie complète</a>
   </nav>
 
-  <main class="main-content">
-    <h1>Centre de soins pour animaux</h1>
-    <p class="welcome-text">
-      Bienvenue dans notre centre de soins dédié aux animaux. 
-      Nous prenons soin de tous types d'animaux avec passion et professionnalisme.
-    </p>
-    <div class="featured-images">
-      <img src="img/care-parakeet01.png" alt="Perruche en soins" loading="lazy">
-      <img src="img/care-fox01.png" alt="Renard en soins" loading="lazy">
-      <img src="img/care-chien02.png" alt="Chien en soins" loading="lazy">
-      <img src="img/care-dog-cat01.png" alt="Chien et chat en soins" loading="lazy">
+  <!-- Bannière Hero -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>Centre de soins pour animaux</h1>
+      <p class="subtitle">Nous prenons soin de tous types d'animaux avec passion et professionnalisme</p>
     </div>
+  </section>
+
+  <main class="main-content">
+    <h2>Bienvenue dans notre centre</h2>
+    <p class="welcome-text">
+      Découvrez notre équipe dévouée et nos installations modernes dédiées au bien-être animal. 
+      Nous offrons des soins de qualité dans un environnement chaleureux et professionnel.
+    </p>
+    
+    <!-- Section 1: Installations -->
+    <section class="content-section">
+      <div class="section-image">
+        <img src="img/care-center01.png" alt="Centre de soins - Vue générale" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Nos installations modernes</h3>
+        <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour le confort et la sécurité de tous nos patients. Des salles de soins équipées, des espaces de récupération et des zones d'observation permettent un suivi optimal.</p>
+      </div>
+    </section>
+    
+    <!-- Section 2: Équipe -->
+    <section class="content-section reverse">
+      <div class="section-image">
+        <img src="img/care-center02.png" alt="Centre de soins - Espace de soins" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Une équipe passionnée</h3>
+        <p>Nos vétérinaires et soignants sont formés aux dernières techniques de soins animaliers. Leur expertise et leur dévouement garantissent des soins de qualité pour chaque animal, qu'il s'agisse d'un petit oiseau ou d'un grand mammifère.</p>
+      </div>
+    </section>
+    
+    <!-- Section 3: Soins spécialisés -->
+    <section class="content-section">
+      <div class="section-image">
+        <img src="img/care-parakeet01.png" alt="Perruche en soins" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Soins spécialisés pour tous</h3>
+        <p>Nous accueillons et soignons tous types d'animaux : oiseaux, mammifères, reptiles. Chaque espèce bénéficie de protocoles de soins adaptés à ses besoins spécifiques et à sa physiologie particulière.</p>
+      </div>
+    </section>
+    
+    <!-- Section 4: Environnement -->
+    <section class="content-section reverse">
+      <div class="section-image">
+        <img src="img/care-fox01.png" alt="Renard en soins" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Un environnement adapté</h3>
+        <p>Notre centre respecte les besoins naturels de chaque animal. Les espaces sont conçus pour minimiser le stress et favoriser la guérison, avec des zones calmes et des espaces de repos appropriés à chaque espèce.</p>
+      </div>
+    </section>
+    
+    <p class="gallery-link">
+      <a href="gallery.html" class="cta-button">Voir toutes nos images</a>
+    </p>
   </main>
 
   <script>

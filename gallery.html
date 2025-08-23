@@ -4,26 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galerie complète - Centre de soins</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; color:#333; }
-    .hamburger { position:fixed; top:20px; right:20px; width:50px; height:50px; background:#333; border-radius:50%; cursor:pointer; z-index:1000; display:flex; align-items:center; justify-content:center; transition:background .3s; }
-    .hamburger:hover { background:#555; }
-    .hamburger span { width:25px; height:3px; background:#fff; position:relative; transition:all .3s; }
-    .hamburger span::before, .hamburger span::after { content:''; position:absolute; width:25px; height:3px; background:#fff; transition:all .3s; }
-    .hamburger span::before { top:-8px; } .hamburger span::after { bottom:-8px; }
-    .hamburger.active span { background:transparent; }
-    .hamburger.active span::before { transform:rotate(45deg); top:0; }
-    .hamburger.active span::after { transform:rotate(-45deg); bottom:0; }
-    .nav-menu { position:fixed; top:0; right:-300px; width:300px; height:100vh; background:#333; transition:right .3s; z-index:999; padding-top:80px; }
-    .nav-menu.active { right:0; }
-    .nav-menu a { display:block; color:#fff; text-decoration:none; padding:15px 30px; font-size:18px; transition:background .3s; }
-    .nav-menu a:hover { background:#555; }
-    header { background:#333; color:#fff; text-align:center; padding:2rem; margin-bottom:2rem; }
-    h1 { margin:0; font-size:2.2em; }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; padding:2rem; max-width:1400px; margin:0 auto; }
-    .gallery img { width:100%; height:250px; object-fit:cover; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,.1); transition:transform .3s ease, box-shadow .3s ease; cursor:pointer; }
-    .gallery img:hover { transform:scale(1.05); box-shadow:0 8px 16px rgba(0,0,0,.2); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu"><span></span></button>
@@ -33,21 +14,97 @@
     <a href="gallery.html">Galerie complète</a>
   </nav>
 
-  <header><h1>Galerie complète des animaux</h1></header>
-
-  <section class="gallery">
-    <img src="img/care-parakeet01.png" alt="Perruche 1" loading="lazy">
-    <img src="img/care-parakeet02.png" alt="Perruche 2" loading="lazy">
-    <img src="img/care-parakeet03.png" alt="Perruche 3" loading="lazy">
-    <img src="img/care-parakeet04.png" alt="Perruche 4" loading="lazy">
-    <img src="img/care-fox01.png" alt="Renard 1" loading="lazy">
-    <img src="img/care-fox02.png" alt="Renard 2" loading="lazy">
-    <img src="img/care-chien02.png" alt="Chien" loading="lazy">
-    <img src="img/care-dog-cat01.png" alt="Chien et chat 1" loading="lazy">
-    <img src="img/care-dog-cat02.png" alt="Chien et chat 2" loading="lazy">
-    <img src="img/care-dog-cat03.png" alt="Chien et chat 3" loading="lazy">
-    <img src="img/care-dog-cat04.png" alt="Chien et chat 4" loading="lazy">
+  <!-- Bannière Hero -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>Galerie complète</h1>
+      <p class="subtitle">Découvrez tous nos animaux en soins dans notre galerie photo</p>
+    </div>
   </section>
+
+  <main class="main-content">
+    <h2>Banque d'images professionnelle</h2>
+    <p class="gallery-intro">
+      Cette galerie présente l'ensemble de nos visuels disponibles pour vos projets. 
+      Chaque image est organisée par catégorie pour faciliter votre sélection.
+    </p>
+    
+    <div class="gallery-categories">
+      <!-- Catégorie: Centres de soins -->
+      <div class="category-section">
+        <h3>Centres de soins</h3>
+        <div class="gallery-grid">
+          <img src="img/care-center01.png" alt="Centre de soins 1" loading="lazy">
+          <img src="img/care-center02.png" alt="Centre de soins 2" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Oiseaux -->
+      <div class="category-section">
+        <h3>Oiseaux en soins</h3>
+        <div class="gallery-grid">
+          <img src="img/care-parakeet01.png" alt="Perruche en soins 1" loading="lazy">
+          <img src="img/care-parakeet02.png" alt="Perruche en soins 2" loading="lazy">
+          <img src="img/care-parakeet03.png" alt="Perruche en soins 3" loading="lazy">
+          <img src="img/care-parakeet04.png" alt="Perruche en soins 4" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Boucs et perruches -->
+      <div class="category-section">
+        <h3>Boucs et perruches</h3>
+        <div class="gallery-grid">
+          <img src="img/care-bouc_parakeet.png" alt="Bouc et perruche en soins" loading="lazy">
+          <img src="img/care-bouc-parakeet02.png" alt="Bouc et perruche en soins 2" loading="lazy">
+          <img src="img/care-bouc-parakeet03.png" alt="Bouc et perruche en soins 3" loading="lazy">
+          <img src="img/care-bouc-parakeet04.png" alt="Bouc et perruche en soins 4" loading="lazy">
+          <img src="img/care-bouc-parakeet05.png" alt="Bouc et perruche en soins 5" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Renards -->
+      <div class="category-section">
+        <h3>Renards en soins</h3>
+        <div class="gallery-grid">
+          <img src="img/care-fox01.png" alt="Renard en soins 1" loading="lazy">
+          <img src="img/care-fox02.png" alt="Renard en soins 2" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Chiens -->
+      <div class="category-section">
+        <h3>Chiens en soins</h3>
+        <div class="gallery-grid">
+          <img src="img/care-chien01.png" alt="Chien en soins 1" loading="lazy">
+          <img src="img/care-chien02.png" alt="Chien en soins 2" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Chats -->
+      <div class="category-section">
+        <h3>Chats en soins</h3>
+        <div class="gallery-grid">
+          <img src="img/care-chat01.png" alt="Chat en soins 1" loading="lazy">
+          <img src="img/care-chat02.png" alt="Chat en soins 2" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Catégorie: Chiens et chats -->
+      <div class="category-section">
+        <h3>Chiens et chats ensemble</h3>
+        <div class="gallery-grid">
+          <img src="img/care-dog-cat01.png" alt="Chien et chat en soins 1" loading="lazy">
+          <img src="img/care-dog-cat02.png" alt="Chien et chat en soins 2" loading="lazy">
+          <img src="img/care-dog-cat03.png" alt="Chien et chat en soins 3" loading="lazy">
+          <img src="img/care-dog-cat04.png" alt="Chien et chat en soins 4" loading="lazy">
+        </div>
+      </div>
+    </div>
+    
+    <div class="gallery-footer">
+      <p>Pour utiliser ces images dans vos projets, contactez-nous avec le nom de l'image et l'emplacement souhaité.</p>
+    </div>
+  </main>
 
   <script>
     const hamburger = document.getElementById('hamburger');
