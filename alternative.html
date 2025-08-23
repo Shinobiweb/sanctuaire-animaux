@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre de soins - Page alternative</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f7f7f7; color:#333; }
+    .hamburger { position:fixed; top:20px; right:20px; width:50px; height:50px; background:#333; border-radius:50%; cursor:pointer; z-index:1000; display:flex; align-items:center; justify-content:center; transition:background .3s; }
+    .hamburger:hover { background:#555; }
+    .hamburger span { width:25px; height:3px; background:#fff; position:relative; transition:all .3s; }
+    .hamburger span::before, .hamburger span::after { content:''; position:absolute; width:25px; height:3px; background:#fff; transition:all .3s; }
+    .hamburger span::before { top:-8px; } .hamburger span::after { bottom:-8px; }
+    .hamburger.active span { background:transparent; }
+    .hamburger.active span::before { transform:rotate(45deg); top:0; }
+    .hamburger.active span::after { transform:rotate(-45deg); bottom:0; }
+    .nav-menu { position:fixed; top:0; right:-300px; width:300px; height:100vh; background:#333; transition:right .3s; z-index:999; padding-top:80px; }
+    .nav-menu.active { right:0; }
+    .nav-menu a { display:block; color:#fff; text-decoration:none; padding:15px 30px; font-size:18px; transition:background .3s; }
+    .nav-menu a:hover { background:#555; }
+    .main-content { padding:100px 20px 20px; text-align:center; }
+    h1 { font-size:2em; margin-bottom:20px; }
+    .images { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; padding:1rem; }
+    .images img { width:45%; max-width:400px; border-radius:8px; height:auto; }
+    @media (max-width:720px){ .images img{ width:100%; } }
+  </style>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu"><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Accueil</a>
+    <a href="alternative.html">Page alternative</a>
+    <a href="gallery.html">Galerie complète</a>
+  </nav>
+
+  <main class="main-content">
+    <h1>Version alternative (point de comparaison)</h1>
+    <section class="images">
+      <img src="img/care-parakeet02.png" alt="Perruche en soins" loading="lazy">
+      <img src="img/care-fox02.png" alt="Renard en soins" loading="lazy">
+      <img src="img/care-chat02.png" alt="Chat en soins" loading="lazy">
+      <img src="img/care-dog-cat02.png" alt="Chien et chat en soins" loading="lazy">
+    </section>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
