@@ -27,6 +27,7 @@ body {
   margin-bottom: 40px;
   position: relative;
   overflow: hidden;
+  min-height: 400px;
 }
 
 .hero-banner::before {
@@ -36,7 +37,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(107, 70, 193, 0.1), rgba(68, 49, 138, 0.1));
+  background: linear-gradient(45deg, rgba(107, 70, 193, 0.3), rgba(68, 49, 138, 0.3));
   z-index: 1;
 }
 
