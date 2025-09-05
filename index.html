@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre de soins - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu"><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Accueil</a>
+    <a href="alternative.html">Page alternative</a>
+  </nav>
+
+  <!-- Bannière Hero -->
+  <section class="hero-banner" style="background-image: url('img/banniere02.webp'); background-size: cover; background-position: center;">
+    <div class="hero-overlay"></div>
+  
+    <div class="hero-inner">
+      <h1 class="hero-title site-title">
+        Sanctuaire Animalier <br> Les Grands Cèdres
+      </h1>
+      <p class="hero-subtitle">
+        Nous prenons soin de tous types d'animaux avec passion et professionnalisme
+      </p>
+    </div>
+  </section>
+  
+
+  <main class="main-content">
+    <h2>Bienvenue dans notre centre</h2>
+    <p class="welcome-text">
+      Découvrez notre équipe dévouée et nos installations modernes dédiées au bien-être animal. 
+      Nous offrons des soins de qualité dans un environnement chaleureux et professionnel.
+    </p>
+    
+    <!-- Section 1: Installations -->
+    <section class="content-section">
+      <div class="section-image">
+        <img src="img/chien01.png" alt="Chien en soins" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Nos installations modernes</h3>
+        <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour le confort et la sécurité de tous nos patients. Des salles de soins équipées, des espaces de récupération et des zones d'observation permettent un suivi optimal.</p>
+      </div>
+    </section>
+    
+    <!-- Section 2: Équipe -->
+    <section class="content-section reverse">
+      <div class="section-image">
+        <img src="img/dog-cat02.png" alt="chien et chat" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Une équipe passionnée</h3>
+        <p>Nos vétérinaires et soignants sont formés aux dernières techniques de soins animaliers. Leur expertise et leur dévouement garantissent des soins de qualité pour chaque animal, qu'il s'agisse d'un petit oiseau ou d'un grand mammifère.</p>
+      </div>
+    </section>
+    
+    <!-- Section 3: Soins spécialisés -->
+    <section class="content-section">
+      <div class="section-image">
+        <img src="img/bouc-parakeet02.png" alt="Perruche avec bouc" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Soins spécialisés pour tous</h3>
+        <p>Nous accueillons et soignons tous types d'animaux : oiseaux, mammifères, reptiles. Chaque espèce bénéficie de protocoles de soins adaptés à ses besoins spécifiques et à sa physiologie particulière.</p>
+      </div>
+    </section>
+    
+    <!-- Section 4: Environnement -->
+    <section class="content-section reverse">
+      <div class="section-image">
+        <img src="img/fox01.png" alt="Renard en soins" loading="lazy">
+      </div>
+      <div class="section-content">
+        <h3>Un environnement adapté</h3>
+        <p>Notre centre respecte les besoins naturels de chaque animal. Les espaces sont conçus pour minimiser le stress et favoriser la guérison, avec des zones calmes et des espaces de repos appropriés à chaque espèce.</p>
+      </div>
+    </section>   
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
